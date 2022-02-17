@@ -1,0 +1,399 @@
+---
+name: Kimberlee
+surname: Baldry
+qualifications: MSc., BSc.
+position: AusSeabed Project Officer
+address: Canberra, Australia
+phone: +61 450 080 836
+email: kimberlee.baldry@ga.gov.au
+twitter: bgc_kim
+# github: bgc_kim
+linkedin: kimberlee-baldry
+researchgate: Kimberlee-Baldry
+orcid: 0000-0003-3286-8624
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "000000"
+output: 
+  vitae::awesomecv:
+    keep_tex: false
+always_allow_html: yes
+header-includes:
+  \definecolor{awesome}{HTML}{800000}
+  \definecolor{text}{HTML}{800000}
+  \definecolor{hyperlink}{HTML}{2E8B57}
+  
+---
+\renewcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{graytext} #1}}
+```{r,include=FALSE}
+library(rorcid)
+library(scholar)
+library(purrr)
+library(dplyr)
+library(vitae)
+#ORCID_TOKEN = gsub("Bearer ","",orcid_auth(reauth = TRUE))
+#usethis::edit_r_environ(scope = "project")
+```
+
+# Personal Attributes
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Enthusiasm for all areas of ocean science
+  \item Highly reactive and adaptable work ethic
+  \item Optimistic and realistic "can-do" attitude
+  \item Inclusive and collaborative nature
+  \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Manages competing priorities
+  \item Active communicator
+  \item Shows strong initiative with unfamiliar tasks
+  \item Creative problem solver
+  \end{itemize}
+\end{minipage}
+
+# Skills and highlights
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Experience working in a multiinstitutional data synthesis program
+  \item Ability to work in a team and collaborate
+  \item Synthesis and visualisation of complex information
+  \item Science communication
+  \item Stakeholder and end-user engagement
+  \item Understanding end-user requirements
+  \item Delivering end-user products and resources
+  \item Program and project reporting and management
+  \item Data and document management
+  \item Spatial statistics
+
+  \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Understanding the strengths and limitations of ocean data for applications
+  \item Strong research skills
+  \item Funding and project proposals
+  \item Critical gap analysis
+  \item Finding, sourcing and aggregating data
+  \item Microsoft 365 suite and TEAMS
+  \item Agile Project Management and JIRA software 
+  \item Adobe suite (Illustrator, Premier Pro, Acrobat ect.)
+  \item Proficiency in R, Python and MATLAB
+  \item Strong written and verbal presentation skills
+  \end{itemize}
+\end{minipage}
+
+  <!-- \item Biogeochemistry and carbonate chemistry -->
+  <!-- \item Ability to use GutHub and GitLab -->
+  <!-- \item Uncertainty quantification -->
+  <!-- \item Document generation with R Markdown -->
+  <!-- \item Limited proficiency in HTML and LaTEX -->
+
+# Key ocean data knowledge areas
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Ocean carbonate chemistry
+  \item Phytoplankton and pigments
+  \item Bio-optics
+  \item Air-sea flux
+  \item Physical oceanography
+  \item Seafloor bathymetry and habitats
+  \item Tropical and coastal ecosystems
+  \item Antarctic krill
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Biogeochemical sensors including Argo
+  \item Data synthesis and aggregation
+  \item Satellite and remote sensing
+  \item Ship-based sampling methods
+  \item Analytical chemistry
+  \item Ocean and ecosystem models
+  \item Lagrangian particle tracking
+  \item Multi-platform methods
+\end{itemize}
+\end{minipage}
+
+# Key ocean science areas of expertise
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Ocean observations
+  \item The marine carbon cycle
+  \item Biogeochemistry
+  \item Marine ecology
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+  \item Southern Ocean Phytoplankton
+  \item Tropical and coastal ecosystems
+  \item Blue carbon storage
+  \item Carbon sequestration through ocean iron fertilisation
+\end{itemize}
+\end{minipage}
+
+# Education and training
+```{r, echo=FALSE}
+exp = rorcid::orcid_educations("0000-0003-3286-8624") %>%
+  purrr::map(purrr::pluck, "affiliation-group", "summaries") %>%
+  purrr::flatten_dfr()
+# exp$why = c("\textcolor{red}{Thesis: Multiplatform observations chlorophyll-a reveal deep diatom communities in the Southern Ocean}","","","Thesis: Exploring the ecosystem engineering ability of Red Sea shallow benthic habitats using stocks and fluxes in carbon biogeochemistry","","")
+exp[1,] %>% detailed_entries(with = `education-summary.role-title`, 
+                         where = ifelse(is.na(`education-summary.end-date.year.value`),paste(`education-summary.start-date.year.value`,"Present",sep = "-"), ifelse(`education-summary.start-date.year.value` != `education-summary.end-date.year.value`, paste(`education-summary.start-date.year.value`,`education-summary.end-date.year.value`,sep = "-"),`education-summary.start-date.year.value`)),
+      what = ifelse(is.na(`education-summary.department-name`), `education-summary.organization.name`, paste(`education-summary.organization.name`,`education-summary.department-name`,sep = "-")))
+```
+
+- \footnotesize Thesis: Multiplatform observations chlorophyll-a reveal deep diatom communities in the Southern Ocean\par
+
+```{r,echo = F}
+exp[2:4,] %>% detailed_entries(with = `education-summary.role-title`, 
+                         where = ifelse(is.na(`education-summary.end-date.year.value`),paste(`education-summary.start-date.year.value`,"Present",sep = "-"), ifelse(`education-summary.start-date.year.value` != `education-summary.end-date.year.value`, paste(`education-summary.start-date.year.value`,`education-summary.end-date.year.value`,sep = "-"),`education-summary.start-date.year.value`)),
+      what = ifelse(is.na(`education-summary.department-name`), `education-summary.organization.name`, paste(`education-summary.organization.name`,`education-summary.department-name`,sep = "-")))
+```
+
+- \footnotesize [\text{\underline{Thesis: Exploring the ecosystem engineering ability of Red Sea shallow benthic habitats using stocks and fluxes}} \newline  \text{\underline{in carbon biogeochemistry}}](https://www.researchgate.net/publication/333310544_Exploring_the_ecosystem_engineering_ability_of_Red_Sea_shallow_benthic_habitats_using_stocks_and_fluxes_in_carbon_biogeochemistry?_sg%5B0%5D=6VsC-ss-bjGmFR7On2_x8a9OoZl4kHGr50UiQ9n6UO7wKF8Sz-GWWlzdygZdr74KROxX7kyKXKvRZQ71MPD47GZjqxehhwoUul3CY8ds.1sRSmIaRkg51CR0rKdmnRW9KpOKAQCWye10ks7PWVHV-CXSdunYpoekFbwT1CRBCzqtGOxQ73Gz3CMy2ijhq-Q)\par
+
+```{r, echo = F}
+exp[5:6,] %>% detailed_entries(with = `education-summary.role-title`, 
+                         where = ifelse(is.na(`education-summary.end-date.year.value`),paste(`education-summary.start-date.year.value`,"Present",sep = "-"), ifelse(`education-summary.start-date.year.value` != `education-summary.end-date.year.value`, paste(`education-summary.start-date.year.value`,`education-summary.end-date.year.value`,sep = "-"),`education-summary.start-date.year.value`)),
+      what = ifelse(is.na(`education-summary.department-name`), `education-summary.organization.name`, paste(`education-summary.organization.name`,`education-summary.department-name`,sep = "-")))
+```
+
+
+# Employment
+```{r, echo= F}
+exp = rorcid::orcid_employments("0000-0003-3286-8624") %>%
+  purrr::map(purrr::pluck, "affiliation-group", "summaries") %>%
+  purrr::flatten_dfr()
+
+names(exp) = stringr::str_remove(string = names(exp), pattern = "employment-summary.") 
+exp %>%
+  mutate(count = c(5,1,1,1,1,1,1,1,1,1)) %>%
+  tidyr::uncount(count) %>%
+  mutate(description = c(
+
+  )) %>%
+  detailed_entries(
+    with = paste(`role-title`, `department-name`, sep = ' - '),
+    where = ifelse(is.na(`end-date.year.value`),paste(`start-date.year.value`,"Present",sep = "-"), ifelse(`start-date.year.value` != `end-date.year.value`, paste(`start-date.year.value`,`end-date.year.value`,sep = "-"),`start-date.year.value`)),
+    what = organization.name,
+    when = paste(organization.address.city,organization.address.country, sep =', '),
+    #why = description,
+    .protect = TRUE
+  )
+```
+
+
+# Publications
+37 citations | 4 h-index | 1 i10-index
+
+See my [*\text{\underline{Google Scholar profile here}}*](https://scholar.google.com/citations?user=z9_6gAEAAAAJ&hl=en) for a full publication and citation report
+
+**Baldry K**, Strutton PG, Hill NA, Boyd PW (2020). [*\text{\underline{Subsurface Chlorophyll-a Maxima in the Southern Ocean.}}*](https://doi.org/10.3389%2Ffmars.2020.00671) Frontiers in Marine Science, 7.
+
+**Baldry K**, Saderne V, McCorkle DC, Churchill JH, Agusti S, Duarte CM (2020). [*\text{\underline{Anomalies in the carbonate system of}} \newline \text{\underline{Red Sea coastal habitats.}}*](https://doi.org/10.5194/bg-17-423-2020) Biogeosciences, 17(2).
+
+Anton A, Almahasheer H, Delgado A, Garcias-Bonet N, Carrillo-de-Albornoz P, Marbà N, Hendriks IE, Krause-Jensen D, Saderne V, **Baldry K**, Duarte CM (2020). [*\text{\underline{Stunted Mangrove Trees in the Oligotrophic Central Red Sea Relate to Nit-}} \newline \text{\underline{rogen Limitation.}}*](https://doi.org/10.3389/fmars.2020.00597) Frontiers in Marine Science, 7.
+
+Anton A, **Baldry K**, Coker DJ, Duarte CM (2020). [*\text{\underline{Drivers of the Low Metabolic Rates of Seagrass Meadows in the Red }} \newline \text{\underline{Sea}}*](https://doi.org/10.3389%2Ffmars.2020.00069). Frontiers in Marine Science, 7.
+
+Saderne V, **Baldry K**, Anton A, Agusti S, Duarte CM (2019). [*\text{\underline{Characterization of the CO$_2$ System in a Coral Reef, a Sea-}} \newline \text{\underline{grass Meadow, and a Mangrove Forest in the Central Red Sea.}}*](https://doi.org/10.1029%2F2019jc015266) Journal of Geophysical Research: Oceans, 124(11), 7513-7528.
+
+Bach LT, Tamsitt V, **Baldry K**, McGee J, Laurenceau-Cornec EC, Strzepek R, Xie Y, Boyd PW (*submitted*). *Holistic re-evaluation of Southern Ocean Iron fertilisation for atmospheric CO$_2$ removal*. Global Biogeochemical Cycles.
+
+**Baldry K**, Hardman-Mountford N, Greenwood J (2017). [*\text{\underline{Estimating total alkalinity for coastal ocean acidification}} \newline \text{\underline{ monitoring at regional to continental scales in Australian coastal waters}}*](https://doi.org/10.5194/bg-2017-221). Biogeosciences Discussions.
+
+\vspace{5mm}
+
+**For submission, in fulfillment of doctorate**
+
+**Baldry K**, Johnson R, Strutton PS, Boyd PW (*in prep*). *BIO-MATE: A biological ocean data reformatting effort*.
+
+**Baldry K**, Strutton PG, Hill NA, Boyd PW (*in prep*). *Non-photochemical quenching of chlorophyll fluorescence in the Southern Ocean*.
+
+**Baldry K**, Tamsitt V, Johnson R, Strutton PG, Hill NA, Boyd PW (*in prep*). *Multi-platform observations reveal environmental drivers in subsurface phytoplankton across the Southern Ocean*.
+
+**Baldry K**, Eriksen R, Tamsitt V, Strutton PG, Hill NA, Boyd PW (*in prep*). *The successional ecology of large-centric diatoms: Joining the dots with BGC-Argo floats*.
+
+# Datasets
+**Baldry K**, Saderne V, McCorkle DC, Churchill JH, Agustí S, Duarte CM (2019). [*\text{\underline{Surface Carbonate Chemistry of the Red}} \newline \text{\underline{Sea (offshore and coastal)}}*](https://doi.org/10.1594/PANGAEA.899850). PANGAEA.
+
+Saderne V, **Baldry K**, Anton A, Agustí S, Duarte CM (2019). [*\text{\underline{Characterization of the CO$_2$ system in a coral reef, a seagrass}} \newline \text{\underline{ meadow and a mangrove forest in the central Red Sea}}*](https://doi.pangaea.de/10.1594/PANGAEA.906954). PANGAEA.
+
+**Baldry K** and Johnson R. (*submitted*). *BIOMATE data compilation (v1.0)*. IMAS Data Repository.
+
+# Selected software
+
+[\text{\underline{BIO-MATE}}](https://github.com/KimBaldry/BIOMATE-Rpackage) 
+
+- R package to reformat ship-based data sets
+
+[\text{\underline{mapSOOSWG}}](https://github.com/KimBaldry/mapSOOSWG)
+
+- R package to support map making for SOOS reporting
+
+[\text{\underline{SIR within seacarb}}](https://github.com/jpgattuso/seacarb-git) 
+
+- R functions to calculate substrate inhibitor ratios
+
+[\text{\underline{Adaption of FluxEngine}}](https://github.com/KimBaldry/FluxEngine/tree/fe4argo) 
+
+- Python package to ingest biogeochemical Argo data and calculate air-sea fluxes
+
+# Selected communication material
+
+**Science writing**
+
+[\text{\underline{AusSeabed Annual Highlights Report 2020/21}}](http://pid.geoscience.gov.au/dataset/ga/145959)
+
+- Lead the production of the report including graphics and textual content
+
+[\text{\underline{ECO Polar Special Issue: Observing hideen phytoplankton in the Autonomous Era}}](http://digital.ecomagazine.com/publication/?i=674747&ver=html5&p=20) 
+
+- Science article, an output of my 2019 SCAR Fellowship
+
+[\text{\underline{Visual story for 2020/21 AusSeabed Achievements}}](http://www.ausseabed.gov.au/resources/news/latest-news/ausseabed-achievements-during-2020-2021)
+
+[\text{\underline{Highlight article on RV Falkor voyages}}](http://www.ausseabed.gov.au/resources/news/latest-news/schmidt-ocean-institutes-rv-falkor-new-year-voyage-maps-over-40,000-square-km)
+
+\vspace{5mm}
+
+**Posters**
+
+[\text{\underline{GMRT-AusSeabed poster for the Forum for Operational Oceanography}}](https://www.foo.org.au/forum/foo-2021/wavescurrents/)
+
+\vspace{5mm}
+
+**Training material**
+
+[\text{\underline{Biogeochemical Argo Data Cheat Sheets}}](http://dx.doi.org/10.25607/OBP-981)
+
+- Summarises important information and resources for new users of biogeochemical Argo data.
+- Visited over 1760 times and over 400 downloads.
+
+[\text{\underline{Biogeochemical Argo User training Workshop}}](https://www.youtube.com/watch?v=HKZ0owuc1zo)
+
+- Workshop and tutorial delivered to biogeochemical Argo data users.
+
+[\text{\underline{QAX Training Material}}](http://www.ausseabed.gov.au/QAX/training-material)
+
+- User training videos for a quality assurance tool for multibeam echosounder (bathymetry) data.
+- Designed in collaboration with experts and developers.
+
+\vspace{5mm}
+
+**Website, promotional and social media**
+
+[\text{\underline{QAX Webpage}}](http://www.ausseabed.gov.au/QAX)
+
+- Developed as a primary landing page for end-users of the new tool.
+
+[\text{\underline{GMRT-AusSeabed Webpage}}](http://www.ausseabed.gov.au/gmrt)
+
+- Developed as a point of reference for interested end-users and stakeholders.
+
+[\text{\underline{GMRT-AusSeabed Promotional video}}](https://www.youtube.com/watch?v=hUXjs-8tqgo)
+
+- Developed for circulation in social media streams, newsletters and presentations to promote the project.
+
+<!-- [\text{\underline{Selected Geoscience Australia twitter post}}]() -->
+
+<!-- ```{r} -->
+<!-- include_tweet() -->
+<!-- ``` -->
+
+<!-- [\text{\underline{Selected personal twitter post}}]() -->
+
+<!-- ```{r} -->
+<!-- include_tweet() -->
+<!-- ``` -->
+
+<!-- **Other communications** -->
+
+<!-- Ocean Best Practices Newsletter - How to Reduce, Reuse and Recycle User Training -->
+
+<!-- AusSeabed Newsletter (example No. ) -->
+
+<!-- AusSeabed Steering Committee meeting minutes -->
+
+
+# Awards, Funding and Grants
+```{r, echo = F}
+exp = rorcid::orcid_fundings("0000-0003-3286-8624") %>%
+   purrr::map(purrr::pluck, "group","funding-summary") %>%
+  purrr::flatten_dfr()
+
+exp %>% detailed_entries(with = title.title.value,
+                         when = `start-date.year.value`,
+                         what = organization.name
+                         )
+```
+
+# Presentations, workshops and conferences
+```{r, echo = F}
+data = data.frame(with = c("SCAR Online Conference","Ocean Sciences Meeting","Antarctic Gateway Program wrap-up meeting","Department of Education on behalf of IMOS","Working with Water","Taroona Seaside Festival","Australian Marine Science Association
+Conference","Antarctic Gateway Partnership Annual General Meeting","Red Sea Research Centre Open Science Conference","The Ocean in a High CO$_2$ World conference"),
+                 when = c("2020","2020","2020","2019","2019","2019","2019","2019","2017","2016"),
+                 what = c("End-user workshop","e-Lightning presentation and two posters","Research talk","Capability presentation","High-school workshop","Interactive display","Research talk and lightning poster presentation","Research talk","Research talk","Research talk"))
+data %>% detailed_entries(what = what, where = when, with = with)
+```
+
+\vspace{5mm}
+
+# Presentation support and design
+
+```{r, echo = F}
+data = data.frame(with = c("GEBCO Map the Gaps Symposium", "Geoscience Australia Seminar","Australian Marine Sciences Associiation"),
+                when = c("2021","2021","2021"),
+                what = c("AusSeabed Program presentation","AusSeabed Program presentation","AusSeabed Program presentation"))
+data %>% detailed_entries(what = `what`, where = `when`, with = `with`)
+```
+
+
+<!-- \begin{itemize} -->
+<!--   \item  -->
+<!--   \item  -->
+<!--   \item  -->
+<!--   \item  -->
+<!--   \item  -->
+<!-- \end{itemize} -->
+
+
+
+
+# Working group participation
+```{r, echo = F}
+data = data.frame(name = c("Observing System Design working group leadership","Ocean Uncertainty Quantification working group"),
+                 date = c("2020-Present","2020"),
+                 group = c("Southern Ocean Observing System","Ocean Best Practice System workshop IV"))
+data %>% detailed_entries(what = `name`, where = `date`, with = `group`)
+```
+
+# References
+\begin{cventries}
+ \cventry
+{Professional referee - AusSeabed Program Director}
+{Kim Picard}
+{\href{mailto:kim.picrd@ga.gov.au}{kim.picard@ga.gov.au}}
+{02 6249 9548}
+{}\cventry
+{Professional referee - PhD supervisor}
+{Philip Boyd}
+{\href{mailto:philip.boyd@utas.edu.au}{philip.boyd@utas.edu.au}}
+{03 6226 8554}
+{}\cventry
+{Professional and personal referee - Data Scientist at Bureau of Meteorology}
+{Rob Johnson}
+{\href{mailto:robert.johnson@bom.gov.au}{robert.johnson@bom.gov.au}}
+{0437 645 248}
+{}
+\end{cventries}
+
+
+\vfill
+
+*This CV was generated using the R package {vitae}*
